@@ -111,7 +111,7 @@ document.querySelectorAll('.card--tilt').forEach(card => {
   4. Vai su Account > API Keys e copia la Public Key
   5. Sostituisci i placeholder qui sotto con i tuoi valori
 */
-emailjs.init('YOUR_PUBLIC_KEY'); // <-- Sostituisci con la tua Public Key di EmailJS
+emailjs.init('Lt4q3_hmPmMtvR7Ls');
 
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
@@ -129,8 +129,8 @@ contactForm.addEventListener('submit', function (e) {
   };
 
   emailjs.send(
-    'YOUR_SERVICE_ID',    // <-- Sostituisci con il tuo Service ID
-    'YOUR_TEMPLATE_ID',   // <-- Sostituisci con il tuo Template ID
+    'service_9ek1f8a',
+    'template_oqple5r',
     params
   ).then(() => {
     formStatus.textContent = 'Messaggio inviato! Ti rispondo il prima possibile.';
