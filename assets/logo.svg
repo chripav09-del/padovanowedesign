@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="440" viewBox="0 0 1120 440">
+  <!-- Wordmark logo ufficiale — Christian Padovano.
+       Font brand: "Christian" = Playfair Display (serif) · "PADOVANO"/tagline = Inter (sans).
+       Sfondo trasparente. ADATTAMENTO CONSENTITO: SOLO il colore del testo per lo sfondo.
+       Struttura, proporzioni, font e disposizione NON vanno mai modificati. -->
+
+  <text x="560" y="180" font-family="'Playfair Display', 'Century Schoolbook L', Georgia, serif" font-size="160" font-weight="bold" fill="#3B82F6" text-anchor="middle">Christian</text>
+
+  <text x="560" y="318" font-family="'Inter', 'Lato', Arial, sans-serif" font-size="132" font-weight="bold" fill="#F8FAFC" text-anchor="middle">PADOVANO</text>
+
+  <rect x="215" y="350" width="690" height="9" rx="4" fill="#3B82F6"/>
+
+  <text x="560" y="414" font-family="'Inter', 'Lato', Arial, sans-serif" font-size="38" font-weight="normal" fill="#94A3B8" text-anchor="middle">WEB  DESIGN  ·  SALERNO</text>
+</svg>

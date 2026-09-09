@@ -1,0 +1,8 @@
+# Roba di lavoro che non deve finire online
+AUDIT-PRELANCIO.md
+*-backup-*/
+*-BACKUP-*/
+anteprima*.html
+.claude/
+.DS_Store
+Thumbs.db

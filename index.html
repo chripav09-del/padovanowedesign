@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christian Padovano — Siti Web Salerno | Web Designer Salerno e Provincia</title>
+  <meta name="description" content="Realizzo siti web professionali per attività locali a Salerno e provincia. Sito vetrina su misura, pronto in pochi giorni. Vedi l&#39;anteprima prima di decidere: preventivo gratuito.">
+  <meta name="keywords" content="siti web Salerno, web designer Salerno, realizzazione siti web, siti web per attività locali, web design Salerno e provincia">
+  <meta name="author" content="Christian Padovano">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0A0F2C">
+  <link rel="canonical" href="https://padovanowebsite.chripav09.workers.dev">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Christian Padovano — Web Designer a Salerno">
+  <meta property="og:description" content="Siti web professionali per attività locali a Salerno e provincia. Pronto in pochi giorni, anteprima prima di decidere.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:url" content="https://padovanowebsite.chripav09.workers.dev">
+  <meta property="og:site_name" content="Christian Padovano Web Design">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Christian Padovano — Web Designer a Salerno">
+  <meta name="twitter:description" content="Siti web professionali per attività locali a Salerno e provincia. Pronto in pochi giorni, anteprima prima di decidere.">
+
+  <!-- Favicon -->
+  <meta property="og:image" content="https://padovanowebsite.chripav09.workers.dev/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://padovanowebsite.chripav09.workers.dev/assets/og-image.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Font: Inter (tutto) + Playfair Display (solo accenti) -->  <link rel="stylesheet" href="assets/fonts/font.css?v=1">
+
+  <!-- AOS Scroll Animations -->
+  <link rel="stylesheet" href="assets/lib/aos.css">
+
+  <!-- ?v=  → alza il numero a ogni modifica di CSS/JS, così i browser
+       non servono la versione vecchia dalla cache dopo un aggiornamento -->
+  <link rel="stylesheet" href="style.css?v=41">
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Christian Padovano Web Design",
+    "description": "Realizzazione siti web professionali per attività locali a Salerno e provincia",
+    "url": "https://padovanowebsite.chripav09.workers.dev",
+    "telephone": "+393515894412",
+    "email": "padovanowebdesign@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Salerno",
+      "addressRegion": "Campania",
+      "addressCountry": "IT"
+    },
+    "areaServed": { "@type": "Place", "name": "Salerno e provincia" },
+    "sameAs": [
+      "https://instagram.com/padovano.webdesign",
+      "https://tiktok.com/@padovano.web.design"
+    ],
+    "priceRange": "€€"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__logo" aria-label="Christian Padovano — Web Design Salerno">
+        <img class="marchio" src="assets/logo.png" alt="Christian Padovano — Web Design, Salerno" width="1002" height="460" decoding="async">
+      </a>
+
+      <!-- Il menu: la pastiglia scorre sotto la voce dove sei, e su telefono
+           si apre a tutto schermo invece di srotolare un elenco stretto. -->
+      <nav class="navbar__nav" id="navMenu" aria-label="Navigazione principale">
+        <span class="navbar__pastiglia" id="navPastiglia" aria-hidden="true"></span>
+        <a href="#portfolio" class="navbar__link"><span>Portfolio</span></a>
+        <a href="costruisci.html" class="navbar__link navbar__link--fuori"><span>Costruiscilo</span></a>
+        <a href="#incluso" class="navbar__link"><span>Cosa è incluso</span></a>
+        <a href="#fiducia" class="navbar__link"><span>Garanzie</span></a>
+        <a href="#domande" class="navbar__link"><span>Domande</span></a>
+        <a href="#contatti" class="navbar__link"><span>Contatti</span></a>
+
+        <!-- solo da telefono: da computer il pulsante sta gia' accanto al menu -->
+        <a href="preventivo.html" class="btn btn--primary btn--lg navbar__ctaMobile">Richiedi preventivo</a>
+      </nav>
+
+      <!-- Niente pulsante WhatsApp qui: c'è già quello flottante sempre visibile in basso a destra -->
+      <a href="preventivo.html" class="btn btn--primary navbar__cta">Richiedi preventivo</a>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas" class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="hero__velo" aria-hidden="true"></div>
+
+    <div class="container hero__content">
+      <p class="eyebrow" data-aos="fade-up">Web Designer · Salerno e provincia</p>
+
+      <h1 class="hero__title" data-aos="fade-up" data-aos-delay="50">
+        Porto la tua attività su Google.
+        <span class="serif grad-text">Pronto in pochi giorni.</span>
+      </h1>
+
+      <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="120">
+        Siti web su misura per attività locali: ristoranti, negozi, studi professionali e artigiani.
+        Me ne occupo io dall'inizio alla fine.
+      </p>
+
+      <div class="hero__ctas" data-aos="fade-up" data-aos-delay="190">
+        <a href="preventivo.html" class="btn btn--primary btn--lg">
+          Scopri quanto costa il tuo
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="#portfolio" class="btn btn--outline btn--lg">Guarda i lavori</a>
+      </div>
+
+      <ul class="trust" data-aos="fade-up" data-aos-delay="260">
+        <li class="trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg>
+          Pronto in pochi giorni
+        </li>
+        <li class="trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v12H3z"/><path d="M3 11h18"/></svg>
+          Anteprima prima di decidere
+        </li>
+        <li class="trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"/><polyline points="9 12 11.5 14.5 15.5 10"/></svg>
+          Assistenza diretta
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CHI SONO ============ -->
+  <section class="section section--alt" id="chi-sono">
+    <div class="container">
+      <div class="chi-sono__grid">
+        <div class="chi-sono__text" data-aos="fade-up">
+          <p class="eyebrow">Chi sono</p>
+          <h2 class="section__title">Una persona sola, dal primo messaggio al sito online.</h2>
+          <p>Mi chiamo Christian e sono di Corbara, in provincia di Salerno. Creo <strong>siti web per attività locali</strong> — dal ristorante al parrucchiere, dall'idraulico allo studio professionale.</p>
+          <p>Seguo personalmente ogni fase: ascolto le tue esigenze, progetto il sito, lo costruisco e lo pubblico. Nessun passaggio complicato, nessun termine tecnico incomprensibile.</p>
+        </div>
+
+        <blockquote class="chi-sono__quote" data-aos="fade-up" data-aos-delay="100">
+          “Tu mi racconti la tua attività, io la porto sul web.”
+          <cite>Christian Padovano</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+  <!-- ============ COSA È INCLUSO ============
+       Ex sezione prezzo. La cifra non si scrive più da nessuna parte: il numero
+       si dice a voce in trattativa, qui si dice solo cosa c'è dentro. -->
+  <section class="section" id="incluso">
+    <div class="container">
+      <div class="section__head" data-aos="fade-up">
+        <p class="eyebrow">Cosa è incluso</p>
+        <h2 class="section__title">Cosa entra nel prezzo</h2>
+        <p class="section__subtitle">Nessun canone obbligatorio, nessuna voce che spunta a fine lavoro. Quello che c'è dentro è scritto qui sotto.</p>
+      </div>
+
+      <div class="offerta" data-aos="fade-up" data-aos-delay="60">
+
+        <!-- Colonna sinistra: la promessa e il pulsante -->
+        <div class="offerta__claim">
+          <span class="offerta__nastro">Preventivo gratuito</span>
+          <p class="offerta__titolo">Il prezzo te lo dico <em>prima</em>.<br>E da lì non si muove.</p>
+          <p class="offerta__testo">
+            Dipende da quante pagine servono e da cosa deve fare il sito: una pagina sola non è
+            un sito con menù, catalogo e prenotazioni. Quattro domande e lo sai — senza impegno,
+            e senza che nessuno ti richiami dopo.
+          </p>
+
+          <div class="offerta__porte">
+            <a href="preventivo.html" class="btn btn--primary btn--lg offerta__cta">
+              Calcola il tuo in due minuti
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+
+            <a href="costruisci.html" class="btn btn--outline btn--lg offerta__cta">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.4"/><path d="M11 18h2"/></svg>
+              Costruisci il tuo sito
+            </a>
+          </div>
+
+          <ul class="offerta__garanzie">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg>
+              Risposta in giornata
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              Anteprima prima di pagare
+            </li>
+          </ul>
+        </div>
+
+        <!-- Colonna destra: l'elenco, con il fuori-preventivo dichiarato -->
+        <div class="offerta__lista">
+          <p class="offerta__label">Sempre compreso</p>
+          <ul class="incluso__voci">
+            <li>
+              <span class="incluso__segno" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span><b>Progettazione su misura</b><em>Colori, struttura e testi costruiti sulla tua attività, non su un modello.</em></span>
+            </li>
+            <li>
+              <span class="incluso__segno" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span><b>Pensato prima per il telefono</b><em>È da lì che arriva quasi tutta la gente che ti cerca.</em></span>
+            </li>
+            <li>
+              <span class="incluso__segno" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span><b>Pubblicazione online</b><em>Certificato di sicurezza attivo. Niente hosting da pagare a parte.</em></span>
+            </li>
+            <li>
+              <span class="incluso__segno" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span><b>Impostato per Google</b><em>Titoli, descrizioni e dati strutturati per farti trovare in zona.</em></span>
+            </li>
+            <li>
+              <span class="incluso__segno" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span><b>Privacy e cookie a norma</b><em>Scritte e configurate, non un modulo scaricato.</em></span>
+            </li>
+          </ul>
+
+          <details class="offerta__fuori">
+            <summary class="offerta__label offerta__label--fuori">
+              Fuori dal preventivo, e te lo dico prima
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+          <ul class="incluso__voci incluso__voci--fuori">
+            <li>
+              <span class="incluso__segno incluso__segno--meno" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 12h12"/></svg>
+              </span>
+              <span><b>Il dominio personalizzato</b><em>Costo annuale che va a chi lo registra. Resta intestato a te, sempre.</em></span>
+            </li>
+            <li>
+              <span class="incluso__segno incluso__segno--meno" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 12h12"/></svg>
+              </span>
+              <span><b>Il servizio fotografico</b><em>Se le foto non ci sono si vede: ti dico come farle o chi chiamare.</em></span>
+            </li>
+            <li>
+              <span class="incluso__segno incluso__segno--meno" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 12h12"/></svg>
+              </span>
+              <span><b>Il mantenimento</b><em>Facoltativo. Se non lo vuoi, il sito resta comunque tuo e online.</em></span>
+            </li>
+          </ul>
+          </details>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO ============
+       Schermate vere dei siti consegnati, in formato telefono perché è così
+       che la gente li apre. Col mouse sopra la pagina scorre tutta.
+       I marchi sono coperti e i nomi sostituiti: nessuno di questi siti è
+       ancora pubblicato sul dominio del cliente. -->
+  <section class="section section--alt" id="portfolio">
+    <div class="container">
+      <div class="section__head" data-aos="fade-up">
+        <p class="eyebrow">Portfolio</p>
+        <h2 class="section__title">Quattro attività, sette schermate</h2>
+        <p class="section__subtitle">Schermate vere, riprese dai siti così come sono. Ognuna è un cliente diverso.<span class="lavoro__scorri-nota"> Passa sopra una scheda: la pagina scorre tutta.</span></p>
+      </div>
+
+      <div class="portfolio__grid" data-carousel="always">
+
+        <article class="card--portfolio" data-aos="fade-up">
+          <div class="browser-chrome">
+            <div class="browser-chrome__dots"><span></span><span></span><span></span></div>
+            <div class="browser-chrome__url">home</div>
+          </div>
+          <div class="shot">
+            <img class="shot__strip" src="assets/lavori/franco.webp?v=2" alt="Home del sito di un salone di parrucchiere per donna" loading="lazy" decoding="async">
+            <span class="shot__pc" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v13"/><path d="m6 12 6 6 6-6"/></svg>Scorri col mouse</span>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__badge portfolio__badge--green">Online da settembre 2026</span>
+            <h3>Parrucchiere donna · Salerno</h3>
+            <p>Hero a tutto vetro, i lavori del salone uno per uno, e la prenotazione in quattro passi.</p>
+          </div>
+        </article>
+
+
+        <article class="card--portfolio" data-aos="fade-up">
+          <div class="browser-chrome">
+            <div class="browser-chrome__dots"><span></span><span></span><span></span></div>
+            <div class="browser-chrome__url">home</div>
+          </div>
+          <div class="shot">
+            <img class="shot__strip" src="assets/lavori/sposa.webp?v=11" alt="Home del sito di un parrucchiere specializzato in acconciature sposa" loading="lazy" decoding="async">
+            <span class="shot__pc" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v13"/><path d="m6 12 6 6 6-6"/></svg>Scorri col mouse</span>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__badge portfolio__badge--green">Progetto realizzato</span>
+            <h3>Parrucchiere · Acconciature sposa</h3>
+            <p>La home: chi è, cosa fa, e la prova sposa prenotabile in due tocchi.</p>
+          </div>
+        </article>
+
+        <article class="card--portfolio" data-aos="fade-up" data-aos-delay="60">
+          <div class="browser-chrome">
+            <div class="browser-chrome__dots"><span></span><span></span><span></span></div>
+            <div class="browser-chrome__url">pagina sposa</div>
+          </div>
+          <div class="shot">
+            <img class="shot__strip" src="assets/lavori/sposa-pagina.webp?v=11" alt="Pagina dedicata alle acconciature sposa, con il portfolio degli chignon" loading="lazy" decoding="async">
+            <span class="shot__pc" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v13"/><path d="m6 12 6 6 6-6"/></svg>Scorri col mouse</span>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__badge portfolio__badge--green">Stesso sito, altra pagina</span>
+            <h3>Il portfolio degli chignon</h3>
+            <p>Una pagina intera per i raccolti, divisi per stile. È quella che convince.</p>
+          </div>
+        </article>
+
+        <article class="card--portfolio" data-aos="fade-up" data-aos-delay="120">
+          <div class="browser-chrome">
+            <div class="browser-chrome__dots"><span></span><span></span><span></span></div>
+            <div class="browser-chrome__url">home</div>
+          </div>
+          <div class="shot">
+            <img class="shot__strip" src="assets/lavori/trattoria.webp?v=11" alt="Home del sito di una trattoria di famiglia" loading="lazy" decoding="async">
+            <span class="shot__pc" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v13"/><path d="m6 12 6 6 6-6"/></svg>Scorri col mouse</span>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__badge portfolio__badge--green">Progetto realizzato</span>
+            <h3>Trattoria di famiglia</h3>
+            <p>Menù con i prezzi veri, la storia della casa, e "aperto o chiuso" che si calcola da solo.</p>
+          </div>
+        </article>
+
+        <article class="card--portfolio" data-aos="fade-up" data-aos-delay="180">
+          <div class="browser-chrome">
+            <div class="browser-chrome__dots"><span></span><span></span><span></span></div>
+            <div class="browser-chrome__url">home</div>
+          </div>
+          <div class="shot">
+            <img class="shot__strip" src="assets/lavori/immobiliare.webp?v=11" alt="Home del sito di un'agenzia immobiliare" loading="lazy" decoding="async">
+            <span class="shot__pc" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v13"/><path d="m6 12 6 6 6-6"/></svg>Scorri col mouse</span>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__badge portfolio__badge--green">Progetto realizzato</span>
+            <h3>Agenzia immobiliare</h3>
+            <p>La home, con la mappa dei comuni che si tocca per vedere cosa c'è lì.</p>
+          </div>
+        </article>
+
+        <article class="card--portfolio" data-aos="fade-up" data-aos-delay="240">
+          <div class="browser-chrome">
+            <div class="browser-chrome__dots"><span></span><span></span><span></span></div>
+            <div class="browser-chrome__url">immobili in vendita</div>
+          </div>
+          <div class="shot">
+            <img class="shot__strip" src="assets/lavori/immobili.webp?v=11" alt="Pagina con l'elenco degli immobili in vendita e i filtri" loading="lazy" decoding="async">
+            <span class="shot__pc" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v13"/><path d="m6 12 6 6 6-6"/></svg>Scorri col mouse</span>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__badge portfolio__badge--green">Stesso sito, altra pagina</span>
+            <h3>L'elenco degli immobili</h3>
+            <p>Filtri per comune, prezzo e locali, e la scheda singola per ogni casa.</p>
+          </div>
+        </article>
+
+        <article class="card--portfolio" data-aos="fade-up" data-aos-delay="300">
+          <div class="browser-chrome">
+            <div class="browser-chrome__dots"><span></span><span></span><span></span></div>
+            <div class="browser-chrome__url">listino prodotti</div>
+          </div>
+          <div class="shot">
+            <img class="shot__strip" src="assets/lavori/prodotti.webp?v=11" alt="Pagina con il listino dei prodotti per capelli" loading="lazy" decoding="async">
+            <span class="shot__pc" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v13"/><path d="m6 12 6 6 6-6"/></svg>Scorri col mouse</span>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__badge portfolio__badge--green">Stesso sito, altra pagina</span>
+            <h3>Il listino dei prodotti</h3>
+            <p>Quello che vende in salone, ordinabile senza passare da un negozio online.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="portfolio__coda">
+        Sono i siti finiti. Gli altri in lavorazione entrano qui appena il cliente manda le foto.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============ SOCIAL ============
+       I video partono da soli, muti, appena entrano nello schermo: nessuno
+       deve premere play. Toccare un video porta al profilo (Instagram o
+       TikTok), non apre un lettore dentro al sito.
+       I file stanno in assets/video/: se un video manca resta la copertina.
+       Christian passa i contenuti veri, qui ci sono i posti dove vanno. -->
+  <section class="section" id="social">
+    <div class="container">
+      <div class="social__testa" data-aos="fade-up">
+        <div>
+          <p class="eyebrow">Seguimi</p>
+          <h2 class="section__title">Guarda come nasce un sito</h2>
+        </div>
+
+        <div class="social__profili">
+          <a href="https://instagram.com/padovano.webdesign" target="_blank" rel="noopener"
+             class="social-pill social-pill--ig" aria-label="Instagram @padovano.webdesign (si apre in una nuova scheda)">
+            <span class="social-pill__icona" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </span>
+            <span class="social-pill__testo">
+              <b>Instagram</b>
+              <i>@padovano.webdesign</i>
+            </span>
+          </a>
+
+          <a href="https://tiktok.com/@padovano.web.design" target="_blank" rel="noopener"
+             class="social-pill social-pill--tt" aria-label="TikTok @padovano.web.design (si apre in una nuova scheda)">
+            <span class="social-pill__icona" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </span>
+            <span class="social-pill__testo">
+              <b>TikTok</b>
+              <i>@padovano.web.design</i>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="social__nastro" data-aos="fade-up" data-aos-delay="60" data-carousel="always">
+
+        <a class="reel" href="https://instagram.com/padovano.webdesign" target="_blank" rel="noopener"
+           aria-label="La sfida degli orari — guarda il video su Instagram (si apre in una nuova scheda)">
+          <span class="reel__schermo">
+            <video class="reel__video" autoplay muted loop playsinline preload="none"
+                   poster="assets/video/sfida-orari.webp">
+              <source src="assets/video/sfida-orari.mp4" type="video/mp4">
+            </video>
+            <span class="reel__marchio reel__marchio--ig" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </span>
+            <span class="reel__titolo">La sfida degli orari</span>
+          </span>
+        </a>
+
+        <a class="reel" href="https://tiktok.com/@padovano.web.design" target="_blank" rel="noopener"
+           aria-label="Ti trovano in due secondi — guarda il video su TikTok (si apre in una nuova scheda)">
+          <span class="reel__schermo">
+            <video class="reel__video" autoplay muted loop playsinline preload="none"
+                   poster="assets/video/cerca-veloce.webp">
+              <source src="assets/video/cerca-veloce.mp4" type="video/mp4">
+            </video>
+            <span class="reel__marchio reel__marchio--tt" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </span>
+            <span class="reel__titolo">Ti trovano in due secondi</span>
+          </span>
+        </a>
+
+        <a class="reel" href="https://instagram.com/padovano.webdesign" target="_blank" rel="noopener"
+           aria-label="Il passaparola lavora di giorno, Google anche di notte — guarda il post su Instagram (si apre in una nuova scheda)">
+          <span class="reel__schermo">
+            <img class="reel__immagine" src="assets/social/il-punto-google.webp" alt="Post: il passaparola lavora di giorno, alle 23:40 lavora Google" loading="lazy" decoding="async">
+            <span class="reel__marchio reel__marchio--ig" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </span>
+            <span class="reel__titolo">Di notte lavora Google</span>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERCHÉ FIDARTI ============ -->
+  <!-- Questa sezione ha sostituito le recensioni finte + il punteggio "5,0 su Google"
+       che non corrispondeva alla realtà. Contiene solo affermazioni verificabili.
+       Quando avrai recensioni Google reali, vedi il blocco commentato in fondo
+       alla sezione: la griglia testimonianze è già pronta. -->
+  <section class="section section--alt" id="fiducia">
+    <div class="container">
+      <div class="section__head" data-aos="fade-up">
+        <p class="eyebrow">Perché fidarti</p>
+        <h2 class="section__title">Nessuna sorpresa, in nessuna fase</h2>
+        <p class="section__subtitle">Quello che ti prometto è scritto qui. Se qualcosa non torna, me lo dici e lo sistemo.</p>
+      </div>
+
+      <div class="promesse" data-carousel>
+
+        <article class="promessa" data-aos="fade-up">
+          <span class="promessa__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="M12 15V4"/><path d="m8 8 4-4 4 4"/></svg>
+          </span>
+          <h3>Vedi l'anteprima prima di decidere</h3>
+          <p>Ti preparo la proposta con colori, testi e struttura della tua attività. La guardi con calma. Se non ti convince, non se ne fa nulla.</p>
+        </article>
+
+        <article class="promessa" data-aos="fade-up" data-aos-delay="60">
+          <span class="promessa__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          </span>
+          <h3>Prezzo fisso, detto prima</h3>
+          <p>Tutto incluso: progettazione, realizzazione, pubblicazione online. Nessun canone mensile a sorpresa, nessuna voce aggiunta a fine lavoro.</p>
+        </article>
+
+        <article class="promessa" data-aos="fade-up" data-aos-delay="120">
+          <span class="promessa__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 4 11.5a8.4 8.4 0 0 1 8.5-8.4 8.4 8.4 0 0 1 8.5 8.4z"/></svg>
+          </span>
+          <h3>Rispondo io, sempre</h3>
+          <p>Non c'è un'agenzia in mezzo né un call center. Scrivi su WhatsApp e trovi me, la stessa persona che ti ha fatto il sito.</p>
+        </article>
+
+        <article class="promessa" data-aos="fade-up" data-aos-delay="180">
+          <span class="promessa__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3.5v5c0 5-3.4 9.3-8 10.5-4.6-1.2-8-5.5-8-10.5v-5L12 3z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg>
+          </span>
+          <h3>Consegnato a norma</h3>
+          <p>Certificato HTTPS, privacy policy e cookie policy conformi al GDPR. Incluse nel prezzo, non un extra da comprare dopo.</p>
+        </article>
+
+      </div>
+
+      <div class="recensioni__cta" data-aos="fade-up" data-aos-delay="120">
+        <span class="recensioni__cta-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47a5.54 5.54 0 0 1-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09A11.99 11.99 0 0 0 12 24z"/>
+            <path fill="#FBBC05" d="M5.27 14.29a7.2 7.2 0 0 1 0-4.58V6.62H1.29a12 12 0 0 0 0 10.76l3.98-3.09z"/>
+            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.69 1.29 6.62l3.98 3.09C6.22 6.86 8.87 4.75 12 4.75z"/>
+          </svg>
+        </span>
+        <h3>Abbiamo già lavorato insieme?</h3>
+        <p>Una recensione su Google richiede meno di un minuto e mi aiuta tantissimo a farmi conoscere qui in zona.</p>
+        <a href="https://g.page/r/CZlwf-M7drNFEAE/review" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Lascia una recensione su Google
+        </a>
+      </div>
+
+      <!-- ===================================================================
+           QUANDO AVRAI RECENSIONI GOOGLE REALI:
+           togli i commenti qui sotto e incolla dentro le recensioni vere
+           (nome come compare su Google, tipo di attività, testo testuale).
+           NON inventarle e NON gonfiare il punteggio: è pubblicità
+           ingannevole (Codice del Consumo artt. 21-23) ed è verificabile
+           in due clic dal tuo profilo Google.
+
+      <div class="testimonials" style="margin-top:var(--sp-5)">
+        <article class="testimonial">
+          <div class="testimonial__stars" role="img" aria-label="5 stelle su 5">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial__quote">Testo della recensione reale.</p>
+          <div class="testimonial__author">
+            <svg class="testimonial__avatar" viewBox="0 0 64 64" role="img" aria-label="Avatar">
+              <defs><linearGradient id="avR" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#60A5FA"/></linearGradient></defs>
+              <circle cx="32" cy="32" r="32" fill="url(#avR)"/>
+              <text x="32" y="41" text-anchor="middle" font-family="Inter, sans-serif" font-size="26" font-weight="700" fill="#0A0F2C">XY</text>
+            </svg>
+            <div>
+              <div class="testimonial__name">Nome reale</div>
+              <div class="testimonial__role">Attività · Città</div>
+            </div>
+          </div>
+        </article>
+      </div>
+      =================================================================== -->
+
+    </div>
+  </section>
+
+
+  <!-- ============ CONTATTI ============
+       Il modulo lungo sta su preventivo.html. Qui ci sono le quattro strade
+       vere: preventivo, WhatsApp, telefono e mail, con scritto quando
+       rispondo davvero. Prima erano due sole e la sezione sembrava vuota. -->
+  <section class="section" id="contatti">
+    <div class="container">
+      <div class="section__head" data-aos="fade-up">
+        <p class="eyebrow">Contatti</p>
+        <h2 class="section__title">Portiamo online la tua attività</h2>
+        <p class="section__subtitle">Scegli come ti viene comodo. Rispondo io, in giornata, e non ti richiama nessun call center.</p>
+      </div>
+
+      <div class="contatti2" data-aos="fade-up">
+
+        <a href="preventivo.html" class="contatto contatto--grande">
+          <span class="contatto__alone" aria-hidden="true"></span>
+          <span class="contatto__icona" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
+          </span>
+          <span class="contatto__testo">
+            <strong>Richiedi il preventivo</strong>
+            <em>Quattro domande sulla tua attività, due minuti. Ti mando una cifra fissa, scritta.</em>
+          </span>
+          <span class="contatto__freccia" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <a href="https://wa.me/393515894412" target="_blank" rel="noopener" class="contatto contatto--wa">
+          <span class="contatto__alone" aria-hidden="true"></span>
+          <span class="contatto__icona" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </span>
+          <span class="contatto__testo">
+            <strong>Scrivimi su WhatsApp</strong>
+            <em>Anche un vocale. Foto del locale, logo o menù: mandali qui, li ricevo subito.</em>
+          </span>
+          <span class="contatto__freccia" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <a href="tel:+393515894412" class="contatto contatto--tel">
+          <span class="contatto__alone" aria-hidden="true"></span>
+          <span class="contatto__icona" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1z"/></svg>
+          </span>
+          <span class="contatto__testo">
+            <strong>351 589 4412</strong>
+            <em>Chiamami: lun–sab, 9–20. Se non rispondo sto lavorando, richiamo io.</em>
+          </span>
+          <span class="contatto__freccia" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <a href="mailto:padovanowebdesign@gmail.com" class="contatto contatto--mail">
+          <span class="contatto__alone" aria-hidden="true"></span>
+          <span class="contatto__icona" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+          </span>
+          <span class="contatto__testo">
+            <strong>padovanowebdesign@gmail.com</strong>
+            <em>Per documenti, testi o preventivi da allegare. Rispondo entro il giorno dopo.</em>
+          </span>
+          <span class="contatto__freccia" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+      </div>
+
+      <ul class="contatti2__note" data-aos="fade-up" data-aos-delay="80">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a7 7 0 1 1 14 0c0 5.6-7 10-7 10Z"/><circle cx="12" cy="11" r="2.6"/></svg>
+          Salerno e provincia, di persona quando serve
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg>
+          Risposta in giornata, festivi compresi
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"/><polyline points="9 12 11.5 14.5 15.5 10"/></svg>
+          Parli sempre con me, mai con un centralino
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ DOMANDE FREQUENTI ============ -->
+  <!-- Ultima sezione prima del footer: chi ha già deciso non ci passa,
+       chi ha ancora dubbi la trova dove la cerca. -->
+  <section class="section section--alt" id="domande">
+    <div class="container">
+      <div class="section__head" data-aos="fade-up">
+        <p class="eyebrow">Domande frequenti</p>
+        <h2 class="section__title">Le domande che mi fanno tutti</h2>
+      </div>
+
+      <!-- FAQ: risponde alle obiezioni vere, senza inventare nulla -->
+      <div class="faq" data-aos="fade-up" data-aos-delay="80">
+
+        <details class="faq__item">
+          <summary>Quanto costa un sito?</summary>
+          <p>Dipende da quante pagine servono e da cosa deve fare il sito: una pagina sola non è un sito con menù, catalogo e prenotazioni. Il preventivo è gratuito, la cifra è fissa e la concordiamo prima di iniziare — nessun canone obbligatorio, nessuna voce aggiunta a fine lavoro. <a href="preventivo.html">Rispondi a quattro domande</a> e ti mando il prezzo.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Quanto ci vuole davvero?</summary>
+          <p>Dipende da quanto materiale hai già pronto (foto, testi, menù). Con il materiale in mano, di solito pochi giorni. Il tempo che serve te lo dico prima di iniziare, non a lavoro avviato.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Devo saper usare il computer?</summary>
+          <p>No. Mi mandi le informazioni come ti viene comodo, anche a voce su WhatsApp. Al resto penso io: il sito te lo consegno già online e funzionante.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>E se dopo devo cambiare un orario o una foto?</summary>
+          <p>Mi scrivi e la cambio. Le modifiche piccole rientrano nell'assistenza. Se un giorno vuoi aggiungere sezioni nuove o rifare il sito da capo, ne riparliamo e ti dico il costo prima.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Il dominio personalizzato (tuosito.it) è compreso?</summary>
+          <p>No, il dominio si paga a parte perché è un costo annuale che va a chi lo registra, non a me. Ne parliamo a sito pronto: ti dico quanto costa e decidi tu se ti serve.</p>
+        </details>
+
+        <details class="faq__item">
+          <summary>Come si paga?</summary>
+          <p>Ci mettiamo d'accordo prima di iniziare. Nessun pagamento ti viene chiesto prima che tu abbia visto l'anteprima del tuo sito.</p>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <img class="marchio" src="assets/logo.png" alt="Christian Padovano — Web Design, Salerno" width="1002" height="460" decoding="async">
+          </div>
+          <p class="footer__tagline">Siti web su misura per attività locali a Salerno e provincia.</p>
+          <ul class="social__icons">
+            <li>
+              <a href="https://instagram.com/padovano.webdesign" target="_blank" rel="noopener" class="social__icon social__icon--ig" aria-label="Instagram (si apre in una nuova scheda)">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://tiktok.com/@padovano.web.design" target="_blank" rel="noopener" class="social__icon social__icon--tt" aria-label="TikTok (si apre in una nuova scheda)">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/393515894412" target="_blank" rel="noopener" class="social__icon social__icon--wa" aria-label="WhatsApp (si apre in una nuova scheda)">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Sito</p>
+          <ul class="footer__list">
+            <li><a href="preventivo.html" class="footer__link">Richiedi preventivo</a></li>
+            <li><a href="costruisci.html" class="footer__link">Costruisci il tuo sito</a></li>
+            <li><a href="#incluso" class="footer__link">Cosa è incluso</a></li>
+            <li><a href="#fiducia" class="footer__link">Garanzie</a></li>
+            <li><a href="#domande" class="footer__link">Domande frequenti</a></li>
+            <li><a href="#contatti" class="footer__link">Contatti</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col--contatti">
+          <p class="footer__col-title">Contatti</p>
+          <ul class="footer__list">
+            <li><a href="mailto:padovanowebdesign@gmail.com" class="footer__link footer__link--mail">padovanowebdesign@gmail.com</a></li>
+            <li><a href="recensioni.html" class="footer__link">Lascia una recensione</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <!-- P.IVA: quando Christian l'apre, va scritta qui e diventa obbligatoria
+             su ogni pagina. Finche' non c'e', la riga non si mette a meta':
+             una "P.IVA —" vuota sembra un sito rotto. -->
+        <p class="footer__copy">&copy; 2026 Christian Padovano · Web Design, Salerno e provincia</p>
+        <nav class="footer__legal" aria-label="Note legali">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#cookie">Cookie Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FAB WHATSAPP ============ -->
+  <a href="https://wa.me/393515894412" target="_blank" rel="noopener" class="fab" id="waFab" aria-label="Scrivimi su WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="assets/lib/three.min.js"></script>
+  <script src="assets/lib/aos.js"></script>
+  <script src="script.js?v=22"></script>
+</body>
+</html>

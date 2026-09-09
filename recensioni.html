@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lascia una Recensione — Christian Padovano Web Design</title>
+  <meta name="description" content="Lascia una recensione su Google per Christian Padovano Web Design, Salerno.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0A0F2C">
+  <!-- Redirect automatico su Google dopo 4 secondi -->
+  <meta http-equiv="refresh" content="4;url=https://g.page/r/CZlwf-M7drNFEAE/review">
+
+  <meta property="og:image" content="https://padovanowebsite.chripav09.workers.dev/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://padovanowebsite.chripav09.workers.dev/assets/og-image.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">  <link rel="stylesheet" href="assets/fonts/font.css?v=1">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #0A0F2C;
+      --navy-light: #111738;
+      --blue: #3B82F6;
+      --blue-light: #60A5FA;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --gold: #FBBF24;
+      --glass: rgba(255,255,255,.045);
+      --stroke: rgba(255,255,255,.08);
+      --sp-2: 8px; --sp-3: 16px; --sp-4: 24px; --sp-5: 40px; --sp-6: 64px;
+      --radius-xl: 32px;
+      --transition: .3s cubic-bezier(.4,0,.2,1);
+      --grad-blue: linear-gradient(120deg, var(--blue) 0%, var(--blue-light) 100%);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--navy);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      padding: var(--sp-4);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      position: relative; overflow-x: hidden;
+    }
+    /* Aloni brand coerenti con la home */
+    body::before {
+      content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(720px 460px at 20% 20%, rgba(59,130,246,.18), transparent 70%),
+        radial-gradient(620px 420px at 80% 80%, rgba(96,165,250,.10), transparent 70%);
+    }
+
+    :focus-visible { outline: 2px solid var(--blue-light); outline-offset: 3px; border-radius: 4px; }
+
+    .card {
+      position: relative; z-index: 1;
+      max-width: 540px; width: 100%; text-align: center;
+      padding: var(--sp-6) var(--sp-5);
+      background: var(--glass);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius-xl);
+      backdrop-filter: blur(18px) saturate(140%);
+      -webkit-backdrop-filter: blur(18px) saturate(140%);
+      box-shadow: 0 24px 70px rgba(0,0,0,.45);
+    }
+    @media (max-width: 520px) { .card { padding: var(--sp-5) var(--sp-4); } }
+
+    .logo { display: inline-flex; flex-direction: column; margin-bottom: var(--sp-5); }
+    .logo__name { display: flex; align-items: baseline; gap: var(--sp-2); justify-content: center; }
+    .logo__christian { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; }
+    .logo__padovano { font-size: .75rem; font-weight: 700; letter-spacing: .22em; color: var(--blue); text-transform: uppercase; }
+    .logo__sub { font-size: .65rem; color: var(--text-muted); letter-spacing: .1em; margin-top: -2px; }
+
+    .stars { display: flex; justify-content: center; gap: 4px; color: var(--gold); margin-bottom: var(--sp-3); }
+    .stars svg { width: 26px; height: 26px; }
+
+    h1 {
+      font-size: clamp(1.6rem, 5.5vw, 2.2rem);
+      font-weight: 800; letter-spacing: -.035em; line-height: 1.15;
+      margin-bottom: var(--sp-3);
+    }
+    h1 .grad { padding-bottom: .06em; display: inline-block; }
+    h1 .grad { background: var(--grad-blue); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+
+    p.lead { color: var(--text-muted); font-size: 1rem; margin-bottom: var(--sp-5); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--grad-blue); color: #fff;
+      font-family: inherit; font-weight: 600; font-size: 1.02rem;
+      padding: 17px 38px; border-radius: 999px; border: none;
+      cursor: pointer; text-decoration: none;
+      box-shadow: 0 6px 20px rgba(59,130,246,.25);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(59,130,246,.4); }
+    .btn svg { width: 20px; height: 20px; }
+
+    .source {
+      display: inline-flex; align-items: center; gap: var(--sp-2);
+      color: var(--text-muted); font-size: .88rem; margin-top: var(--sp-4);
+    }
+    .source svg { width: 17px; height: 17px; }
+
+    .note { color: #64748B; font-size: .8rem; margin-top: var(--sp-3); }
+
+    .back {
+      display: inline-block; margin-top: var(--sp-5);
+      color: var(--text-muted); font-size: .82rem; text-decoration: none;
+      border-top: 1px solid var(--stroke); padding-top: var(--sp-4); width: 100%;
+      transition: color var(--transition);
+    }
+    .back:hover { color: var(--blue-light); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="card">
+    <a href="index.html" class="logo" aria-label="Christian Padovano — Web Design Salerno">
+      <span class="logo__name"><span class="logo__christian">Christian</span><span class="logo__padovano">PADOVANO</span></span>
+      <span class="logo__sub">Web Design · Salerno</span>
+    </a>
+
+    <div class="stars" role="img" aria-label="5 stelle su 5">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+
+    <h1>Ti è piaciuto<br><span class="grad">il mio lavoro?</span></h1>
+    <p class="lead">La tua opinione è importante. Lascia una recensione su Google — ci vuole meno di un minuto e mi aiuta tantissimo a farmi conoscere.</p>
+
+    <a href="https://g.page/r/CZlwf-M7drNFEAE/review" class="btn">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Lascia una recensione
+    </a>
+
+    <span class="source">
+      <!-- Logo Google (G) ufficiale multicolore -->
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47a5.54 5.54 0 0 1-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+        <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09A11.99 11.99 0 0 0 12 24z"/>
+        <path fill="#FBBC05" d="M5.27 14.29a7.2 7.2 0 0 1 0-4.58V6.62H1.29a12 12 0 0 0 0 10.76l3.98-3.09z"/>
+        <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.69 1.29 6.62l3.98 3.09C6.22 6.86 8.87 4.75 12 4.75z"/>
+      </svg>
+      su Google
+    </span>
+
+    <p class="note">Verrai reindirizzato su Google tra pochi secondi...</p>
+
+    <a href="index.html" class="back">← Torna al sito</a>
+  </main>
+
+</body>
+</html>

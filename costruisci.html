@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Costruisci il tuo sito — Christian Padovano | Siti Web Salerno</title>
+  <meta name="description" content="Scegli mestiere, nome, carattere e funzioni: il tuo sito si monta davanti a te, con i tuoi colori e il tuo nome dentro. Poi lo mandi già pronto, su WhatsApp o al preventivo.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0A0F2C">
+
+  <link rel="canonical" href="https://padovanowebsite.chripav09.workers.dev/costruisci.html">
+
+  <meta property="og:title" content="Costruisci il tuo sito — Christian Padovano Web Design">
+  <meta property="og:description" content="Scegli mestiere, carattere e funzioni e guarda il sito montarsi davanti a te, col nome della tua attività dentro.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:url" content="https://padovanowebsite.chripav09.workers.dev/costruisci.html">
+  <meta property="og:site_name" content="Christian Padovano Web Design">
+
+  <meta property="og:image" content="https://padovanowebsite.chripav09.workers.dev/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://padovanowebsite.chripav09.workers.dev/assets/og-image.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Font del sito + le famiglie che servono all'anteprima: ogni carattere
+       cambia davvero font, non solo colore. Da portare in locale al lancio. -->  <link rel="stylesheet" href="assets/fonts/font.css?v=1">
+
+  <link rel="stylesheet" href="style.css?v=41">
+</head>
+<body class="pagina-costruttore">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar navbar--scrolled" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Christian Padovano — Web Design Salerno">
+        <img class="marchio" src="assets/logo.png" alt="Christian Padovano — Web Design, Salerno" width="1002" height="460" decoding="async">
+      </a>
+
+      <nav class="navbar__nav" aria-label="Navigazione principale">
+        <a href="index.html#portfolio" class="navbar__link">Portfolio</a>
+        <a href="index.html#incluso" class="navbar__link">Cosa è incluso</a>
+        <a href="index.html#contatti" class="navbar__link">Contatti</a>
+      </nav>
+
+      <a href="preventivo.html" class="btn btn--primary navbar__cta">Richiedi preventivo</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <div class="costr__testa">
+        <p class="eyebrow">Costruttore</p>
+        <h1 class="section__title">Costruisci il tuo sito</h1>
+        <p class="section__subtitle">
+          Scrivi il nome della tua attività e guardalo comparire. Colori, carattere e sezioni
+          cambiano davvero mentre scegli: quello che vedi nel telefono è il punto di partenza
+          da cui lavoro.
+        </p>
+      </div>
+
+      <div class="costr2">
+
+        <!-- ======== COMANDI ======== -->
+        <div class="costr2__comandi">
+
+          <div class="costr2__passo">
+            <p class="costr2__num">01</p>
+            <div>
+              <label class="costr2__label" for="nomeAttivita">Come si chiama la tua attività?</label>
+              <p class="costr2__aiuto">Scrivilo: entra nel sito, nell'indirizzo e nei testi qui accanto.</p>
+              <input type="text" id="nomeAttivita" class="costr2__input" placeholder="Pizzeria Da Mario" maxlength="26" autocomplete="organization">
+            </div>
+          </div>
+
+          <div class="costr2__passo">
+            <p class="costr2__num">02</p>
+            <div>
+              <p class="costr2__label">Che mestiere fai?</p>
+              <p class="costr2__aiuto">Cambia le foto, le parole e le sezioni consigliate.</p>
+              <div class="costr2__scelte" id="costrMestieri" role="radiogroup" aria-label="Mestiere">
+                <button type="button" class="costr__chip is-scelto" data-mestiere="ristorazione" aria-pressed="true">Ristorazione</button>
+                <button type="button" class="costr__chip" data-mestiere="bellezza" aria-pressed="false">Bellezza</button>
+                <button type="button" class="costr__chip" data-mestiere="artigiano" aria-pressed="false">Casa e artigiani</button>
+                <button type="button" class="costr__chip" data-mestiere="studio" aria-pressed="false">Studio</button>
+                <button type="button" class="costr__chip" data-mestiere="ricettivo" aria-pressed="false">B&amp;B</button>
+                <button type="button" class="costr__chip" data-mestiere="negozio" aria-pressed="false">Negozio</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="costr2__passo">
+            <p class="costr2__num">03</p>
+            <div>
+              <p class="costr2__label">Che carattere deve avere?</p>
+              <p class="costr2__aiuto">Cambia colori <b>e</b> font. Lo stesso mestiere può parlare in quattro modi.</p>
+              <div class="costr2__stili" id="costrStili" role="radiogroup" aria-label="Carattere">
+                <button type="button" class="stile is-scelto" data-stile="classico" aria-pressed="true">
+                  <span class="stile__punti" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="stile__nome">Classico</span>
+                  <span class="stile__desc">Caldo, di famiglia</span>
+                </button>
+                <button type="button" class="stile" data-stile="elegante" aria-pressed="false">
+                  <span class="stile__punti" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="stile__nome">Elegante</span>
+                  <span class="stile__desc">Sobrio, di lusso</span>
+                </button>
+                <button type="button" class="stile" data-stile="deciso" aria-pressed="false">
+                  <span class="stile__punti" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="stile__nome">Deciso</span>
+                  <span class="stile__desc">Forte, si fa notare</span>
+                </button>
+                <button type="button" class="stile" data-stile="pulito" aria-pressed="false">
+                  <span class="stile__punti" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="stile__nome">Pulito</span>
+                  <span class="stile__desc">Chiaro, niente fronzoli</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="costr2__passo">
+            <p class="costr2__num">04</p>
+            <div>
+              <p class="costr2__label">Cosa deve fare il sito?</p>
+              <p class="costr2__aiuto">Tocca per aggiungere o togliere. Le sezioni entrano ed escono davvero.</p>
+              <div class="costr2__scelte" id="costrPezzi" aria-label="Funzioni">
+                <button type="button" class="costr__chip is-scelto" data-pezzo="listino" aria-pressed="true">Menù o listino</button>
+                <button type="button" class="costr__chip is-scelto" data-pezzo="galleria" aria-pressed="true">Galleria foto</button>
+                <button type="button" class="costr__chip" data-pezzo="prenota" aria-pressed="false">Prenotazioni</button>
+                <button type="button" class="costr__chip" data-pezzo="mappa" aria-pressed="false">Mappa e orari</button>
+                <button type="button" class="costr__chip" data-pezzo="recensioni" aria-pressed="false">Recensioni</button>
+                <button type="button" class="costr__chip" data-pezzo="squadra" aria-pressed="false">Chi siamo</button>
+                <button type="button" class="costr__chip" data-pezzo="offerte" aria-pressed="false">Offerte del mese</button>
+                <button type="button" class="costr__chip" data-pezzo="contatti" aria-pressed="false">Modulo contatti</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ======== ANTEPRIMA ======== -->
+        <div class="costr2__anteprima">
+          <div class="costr2__appesa">
+
+            <!-- Il telefono vero: scocca in titanio, isola dinamica, barra di stato,
+                 barra dell'indirizzo del browser e sotto il sito che si monta. -->
+            <div class="tf" id="tfCornice">
+              <div class="tf__scocca">
+                <span class="tf__tasto tf__tasto--silenzioso" aria-hidden="true"></span>
+                <span class="tf__tasto tf__tasto--su" aria-hidden="true"></span>
+                <span class="tf__tasto tf__tasto--giu" aria-hidden="true"></span>
+                <span class="tf__tasto tf__tasto--accensione" aria-hidden="true"></span>
+
+                <div class="tf__vetro" id="tfVetro">
+
+                  <!-- barra di stato di iOS -->
+                  <div class="tf__stato" aria-hidden="true">
+                    <span class="tf__ora" id="tfOra">9:41</span>
+                    <span class="tf__isola"><i class="tf__lente"></i></span>
+                    <span class="tf__indicatori">
+                      <svg viewBox="0 0 20 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="4.5" y="6" width="3" height="6" rx="1"/><rect x="9" y="3.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="1" width="3" height="11" rx="1"/></svg>
+                      <svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 10.6 5.9 8.4a3 3 0 0 1 4.2 0L8 10.6Zm0-4.3a6 6 0 0 0-4.2 1.7L2.4 6.6a8 8 0 0 1 11.2 0l-1.4 1.4A6 6 0 0 0 8 6.3Z"/></svg>
+                      <svg viewBox="0 0 26 12" aria-hidden="true"><rect x="0.6" y="0.6" width="21" height="10.8" rx="3" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".5"/><rect x="2.2" y="2.2" width="15" height="7.6" rx="1.8"/><path d="M23.4 4.2v3.6a2 2 0 0 0 0-3.6Z"/></svg>
+                    </span>
+                  </div>
+
+                  <!-- barra dell'indirizzo -->
+                  <div class="tf__url" aria-hidden="true">
+                    <span class="tf__lucchetto">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                    </span>
+                    <span class="tf__dominio" id="tfDominio">damario.it</span>
+                    <span class="tf__ricarica">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 11a8 8 0 1 0-1.6 5.6"/><path d="M20 5v6h-6"/></svg>
+                    </span>
+                  </div>
+
+                  <!-- IL SITO -->
+                  <div class="tf__sito" id="tfSito">
+
+                    <div class="tf__nav">
+                      <span class="tf__marchio" id="tfMarchio">Da Mario</span>
+                      <span class="tf__hamb"><i></i><i></i><i></i></span>
+                    </div>
+
+                    <div class="tf__hero" id="tfHero">
+                      <span class="tf__fondo" id="tfFondo" aria-hidden="true"></span>
+                      <span class="tf__velo" aria-hidden="true"></span>
+                      <span class="tf__testi">
+                        <span class="tf__occhiello" id="tfOcchiello">RISTORANTE · SALERNO</span>
+                        <span class="tf__titolo" id="tfTitolo">Il gusto di casa,<br>ogni giorno</span>
+                        <span class="tf__sotto" id="tfSotto">Cucina di famiglia a Salerno, dal 1998.</span>
+                        <span class="tf__azioni">
+                          <span class="tf__btn" id="tfBtn">Prenota un tavolo</span>
+                          <span class="tf__btn tf__btn--vuoto">Chiama</span>
+                        </span>
+                      </span>
+                    </div>
+
+                    <div class="tf__strisciaFiducia" id="tfFiducia">
+                      <span><b id="tfNum1">1998</b><i id="tfEti1">Dal</i></span>
+                      <span><b id="tfNum2">4,9</b><i id="tfEti2">Su Google</i></span>
+                      <span><b id="tfNum3">2 min</b><i id="tfEti3">Dal centro</i></span>
+                    </div>
+
+                    <div class="tf__blocco" data-pezzo="listino">
+                      <span class="tf__etichetta" id="tfListinoNome">Il menù</span>
+                      <span class="tf__riga"><i>Antipasti</i><b>da 6 €</b></span>
+                      <span class="tf__riga"><i>Primi</i><b>da 8 €</b></span>
+                      <span class="tf__riga"><i>Secondi</i><b>da 10 €</b></span>
+                    </div>
+
+                    <div class="tf__blocco" data-pezzo="galleria">
+                      <span class="tf__etichetta">Galleria</span>
+                      <span class="tf__foto"><i></i><i></i><i></i><i></i></span>
+                    </div>
+
+                    <div class="tf__blocco" data-pezzo="prenota">
+                      <span class="tf__etichetta" id="tfPrenotaNome">Prenota</span>
+                      <span class="tf__campo"><i>Nome</i></span>
+                      <span class="tf__campo"><i>Giorno e ora</i></span>
+                      <span class="tf__btn tf__btn--pieno">Invia richiesta</span>
+                    </div>
+
+                    <div class="tf__blocco" data-pezzo="mappa">
+                      <span class="tf__etichetta">Dove siamo</span>
+                      <span class="tf__mappa"><i></i></span>
+                      <span class="tf__riga"><i>Lun–Sab</i><b>12–15 · 19–23</b></span>
+                    </div>
+
+                    <div class="tf__blocco" data-pezzo="recensioni">
+                      <span class="tf__etichetta">Dicono di noi</span>
+                      <span class="tf__recensione">
+                        <span class="tf__stelle">★★★★★</span>
+                        <span class="tf__testo" id="tfRecensione">Si mangia come a casa, e si spende il giusto.</span>
+                        <span class="tf__firma">Antonio R.</span>
+                      </span>
+                    </div>
+
+                    <div class="tf__blocco" data-pezzo="squadra">
+                      <span class="tf__etichetta">Chi siamo</span>
+                      <span class="tf__persone"><i></i><i></i><i></i></span>
+                    </div>
+
+                    <div class="tf__blocco" data-pezzo="offerte">
+                      <span class="tf__etichetta">Questo mese</span>
+                      <span class="tf__offerta"><i>Promo del mese</i><b>-20%</b></span>
+                    </div>
+
+                    <div class="tf__blocco" data-pezzo="contatti">
+                      <span class="tf__etichetta">Scrivici</span>
+                      <span class="tf__campo"><i>La tua mail</i></span>
+                      <span class="tf__campo tf__campo--alto"><i>Il messaggio</i></span>
+                      <span class="tf__btn tf__btn--pieno">Invia</span>
+                    </div>
+
+                    <div class="tf__pie">
+                      <span class="tf__pieMarchio" id="tfPieMarchio">Da Mario</span>
+                      <span class="tf__pieRighe"><i></i><i></i></span>
+                    </div>
+                  </div>
+
+                  <!-- barra inferiore del browser + riga di casa -->
+                  <div class="tf__barraGiu" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 6 9 12l6 6"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" opacity=".35"><path d="m9 6 6 6-6 6"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M12 4v16"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="3"/></svg>
+                  </div>
+                  <span class="tf__casa" aria-hidden="true"></span>
+
+                </div>
+              </div>
+            </div>
+
+            <p class="costr2__conto" id="costrConto" aria-live="polite"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ======== CHIUSURA ======== -->
+      <div class="costr2__fine">
+        <div class="costr2__riepilogo" id="costrRiepilogo"></div>
+
+        <div class="costr2__uscite">
+          <a href="preventivo.html" class="btn btn--primary btn--lg" id="costrCta">
+            Portalo al preventivo
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+
+          <a href="https://wa.me/393515894412" target="_blank" rel="noopener" class="btn btn--wa btn--lg" id="costrWa">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Mandamelo su WhatsApp
+          </a>
+        </div>
+
+        <p class="costr2__nota">
+          In tutti e due i casi le scelte partono già scritte: mestiere, carattere e sezioni.
+          Là resta solo il tuo nome e come richiamarti. Nessun impegno, e non ti richiama nessuno.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="margin-top:0;border-top:none;padding-top:0">
+        <p class="footer__copy">&copy; 2026 Christian Padovano · Web Design, Salerno e provincia</p>
+        <nav class="footer__legal" aria-label="Note legali">
+          <a href="index.html">Torna al sito</a>
+          <a href="index.html#portfolio">Portfolio</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/393515894412" target="_blank" rel="noopener" class="fab is-visible" aria-label="Scrivimi su WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="costruisci.js?v=3"></script>
+</body>
+</html>

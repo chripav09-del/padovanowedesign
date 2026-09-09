@@ -1,0 +1,5 @@
+# Christian Padovano — Web Design, Salerno
+User-agent: *
+Allow: /
+
+Sitemap: https://padovanowebsite.chripav09.workers.dev/sitemap.xml
