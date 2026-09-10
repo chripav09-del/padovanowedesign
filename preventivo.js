@@ -258,11 +258,18 @@
         throw new Error('invio');
       })
       .then(() => {
-        stato.textContent = 'Richiesta arrivata. Ti rispondo in giornata.';
-        stato.className = 'form__status form__status--success';
-        form.reset();
-        disegnaScelte();
-        vaiA(1, -1);
+        // niente form svuotato e riportato al primo passo: sembrava che la
+        // richiesta non fosse partita e che bisognasse rifare tutto da capo.
+        // Al suo posto compare la schermata di fine, con la porta per la home.
+        const fine = document.getElementById('fine');
+        if (fine) {
+          form.hidden = true;
+          fine.hidden = false;
+          fine.scrollIntoView({ behavior: RIDOTTO ? 'auto' : 'smooth', block: 'center' });
+        } else {
+          stato.textContent = 'Richiesta arrivata. Ti rispondo in giornata.';
+          stato.className = 'form__status form__status--success';
+        }
       })
       .catch(err => {
         stato.innerHTML = err.message === 'troppe'

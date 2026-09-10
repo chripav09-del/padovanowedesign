@@ -2495,3 +2495,31 @@ a.dato__val:hover { color: var(--blue-light); }
   position: absolute; left: -9999px; top: auto;
   width: 1px; height: 1px; overflow: hidden;
 }
+
+/* =========================================================
+   SCHERMATA DI FINE — preventivo.html
+   Prende il posto del modulo quando la richiesta e' partita.
+   ========================================================= */
+.fine {
+  display: grid; justify-items: center; text-align: center; gap: var(--sp-3);
+  padding: var(--sp-6) var(--sp-4);
+  background: var(--glass); border: 1px solid var(--stroke);
+  border-radius: var(--radius-lg);
+  animation: fineEntra .5s cubic-bezier(.16,1,.3,1) both;
+}
+@keyframes fineEntra { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.fine__segno {
+  display: grid; place-items: center; width: 62px; height: 62px; border-radius: 50%;
+  background: rgba(37,211,102,.14); color: var(--whatsapp);
+  box-shadow: inset 0 0 0 1px rgba(37,211,102,.35);
+}
+.fine__segno svg { width: 30px; height: 30px; }
+.fine__titolo { font-family: 'Playfair Display', Georgia, serif; font-size: 1.9rem; letter-spacing: -.01em; }
+.fine__testo { color: var(--text-muted); max-width: 46ch; line-height: 1.6; }
+.fine__porte { display: flex; flex-wrap: wrap; gap: var(--sp-3); justify-content: center; margin-top: var(--sp-2); }
+@media (max-width: 560px) {
+  .fine { padding: var(--sp-5) var(--sp-3); }
+  .fine__titolo { font-size: 1.5rem; }
+  .fine__porte { flex-direction: column; align-items: stretch; width: 100%; }
+  .fine__porte .btn { justify-content: center; }
+}

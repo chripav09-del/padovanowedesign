@@ -23,7 +23,7 @@
   <meta name="twitter:image" content="https://padovanowebsite.chripav09.workers.dev/assets/og-image.jpg">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">  <link rel="stylesheet" href="assets/fonts/font.css?v=1">
-  <link rel="stylesheet" href="style.css?v=44">
+  <link rel="stylesheet" href="style.css?v=45">
 </head>
 <body>
 
@@ -198,6 +198,30 @@
 
       </form>
 
+      <!-- Schermata di fine: prima dell'invio non c'e'. Dopo, prende il posto
+           del modulo. Prima invece il modulo si svuotava e tornava al primo
+           passo, e sembrava che la richiesta non fosse partita e bisognasse
+           rifare tutto da capo. -->
+      <div class="fine" id="fine" hidden>
+        <span class="fine__segno" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>
+        </span>
+        <h2 class="fine__titolo">Richiesta arrivata.</h2>
+        <p class="fine__testo">
+          Ti rispondo in giornata, di persona, all'indirizzo che mi hai lasciato.
+          Se nel frattempo ti viene in mente qualcosa, scrivimi pure su WhatsApp.
+        </p>
+        <div class="fine__porte">
+          <a href="index.html" class="btn btn--primary btn--lg">
+            Torna alla home
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/393515894412" target="_blank" rel="noopener" class="btn btn--whatsapp btn--lg">
+            Scrivimi su WhatsApp
+          </a>
+        </div>
+      </div>
+
     </div>
   </main>
 
@@ -214,6 +238,6 @@
     </div>
   </footer>
 
-  <script src="preventivo.js?v=6"></script>
+  <script src="preventivo.js?v=7"></script>
 </body>
 </html>
