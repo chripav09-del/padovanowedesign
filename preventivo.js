@@ -247,9 +247,7 @@
         nome: d.nome,
         attivita: d.attivita || d.settore,
         contatto: d.contatto,
-        messaggio: 'RICHIESTA PREVENTIVO
-
-' + riepilogoTesto(d),
+        messaggio: `RICHIESTA PREVENTIVO\n\n${riepilogoTesto(d)}`,
         sitoWeb: trappola ? trappola.value : '',
         tempo: Date.now() - APERTURA
       })
@@ -268,8 +266,8 @@
       })
       .catch(err => {
         stato.innerHTML = err.message === 'troppe'
-          ? 'Hai gia inviato due richieste di fila. Aspetta un minuto, oppure scrivimi su WhatsApp qui accanto.'
-          : 'Non e' partita. Prova con il pulsante WhatsApp qui accanto, oppure scrivimi a <a href="mailto:padovanowebdesign@gmail.com">padovanowebdesign@gmail.com</a>.';
+          ? 'Hai già inviato tre richieste di fila. Aspetta un minuto, oppure scrivimi su WhatsApp qui accanto.'
+          : 'Non è partita. Prova con il pulsante WhatsApp qui accanto, oppure scrivimi a <a href="mailto:padovanowebdesign@gmail.com">padovanowebdesign@gmail.com</a>.';
         stato.className = 'form__status form__status--error';
         console.error('Invio preventivo:', err);
       })
