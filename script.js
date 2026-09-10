@@ -56,6 +56,17 @@ if (hamburger && navMenu) {
     hamburger.setAttribute('aria-label', open ? 'Chiudi menu' : 'Apri menu');
   });
 
+  // il logo riporta alla home, e chiude il menu se era aperto
+  const logoNav = document.querySelector('.navbar__logo');
+  if (logoNav) {
+    logoNav.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Apri menu');
+    });
+  }
+
   navMenu.querySelectorAll('.navbar__link').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('open');
@@ -702,7 +713,47 @@ if (hasFinePointer && !REDUCED_MOTION) {
     strip.style.transform = 'translate3d(0, 0, 0)';
   }
 
-  if (!finePointer || REDUCED_MOTION) return;
+  /* ---------- Da telefono: si tocca ----------
+     Col mouse la schermata scorre passandoci sopra. Sul telefono il mouse non
+     c'e', e prima non scorreva affatto: si vedeva solo la prima schermata e
+     basta. Adesso un tocco fa partire lo scorrimento, un secondo tocco lo
+     riporta in cima. La scheda non e' un link, quindi il tocco non porta via
+     da nessuna parte. */
+  if (!finePointer) {
+    if (REDUCED_MOTION) return;
+
+    // la pastiglia dice cosa fare col dito, non col mouse
+    function etichetta(card, testo) {
+      const p = card.querySelector('.shot__pc');
+      if (!p) return;
+      const svg = p.querySelector('svg');
+      p.textContent = testo;
+      if (svg) p.prepend(svg);
+    }
+
+    document.querySelectorAll(CARD).forEach(function (card) {
+      etichetta(card, 'Tocca per scorrere');
+    });
+
+    document.addEventListener('click', function (e) {
+      const card = e.target.closest(CARD);
+      if (!card) return;
+      // se si e' toccato un link o un pulsante dentro la scheda, comanda quello
+      if (e.target.closest('a, button')) return;
+      const inCorsa = card.classList.toggle('is-in-corsa');
+      if (inCorsa) {
+        scorri(card);
+        etichetta(card, 'Tocca per fermare');
+      } else {
+        torna(card);
+        etichetta(card, 'Tocca per scorrere');
+      }
+    });
+
+    return;
+  }
+
+  if (REDUCED_MOTION) return;
 
   document.addEventListener('pointerover', function (e) {
     const card = e.target.closest(CARD);
