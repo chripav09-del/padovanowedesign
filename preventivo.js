@@ -1,15 +1,19 @@
 /* =========================================================
    Christian PADOVANO — Web Design · Salerno
    preventivo.js — quattro passi, due uscite.
-   Le chiavi EmailJS sono le stesse già in uso sul resto del sito.
+
+   Le chiavi EmailJS non stanno piu' qui dentro. Prima chiunque aprisse il
+   sorgente della pagina se le copiava e poteva bruciare i messaggi del piano
+   mandando dal proprio sito. Adesso la richiesta va a un worker nostro, che
+   tiene le chiavi al sicuro, accetta solo quello che parte da questo sito e
+   scarta i robot.
    ========================================================= */
 (() => {
   'use strict';
 
-  const EMAILJS_KEY = 'Lt4q3_hmPmMtvR7Ls';
-  const SERVICE_ID  = 'service_9ek1f8a';
-  const TEMPLATE_ID = 'template_oqple5r';
-  const WHATSAPP    = '393515894412';
+  const INVIO    = 'https://modulo-preventivo.chripav09.workers.dev';
+  const WHATSAPP = '393515894412';
+  const APERTURA = Date.now();   // quanto ci ha messo a compilare: i robot corrono
   const RIDOTTO = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const $  = (s, r = document) => r.querySelector(s);
@@ -230,23 +234,31 @@
     const d = letture();
     if (bloccaSeIncompleto(d)) return;
 
-    if (typeof emailjs === 'undefined') {
-      stato.innerHTML = 'Invio email non disponibile adesso. Usa il pulsante WhatsApp qui accanto, oppure scrivimi a <a href="mailto:padovanowebdesign@gmail.com">padovanowebdesign@gmail.com</a>.';
-      stato.className = 'form__status form__status--error';
-      return;
-    }
-
     stato.textContent = 'Invio in corso...';
     stato.className = 'form__status';
     btnMail.disabled = true;
 
-    emailjs.init(EMAILJS_KEY);
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, {
-      nome: d.nome,
-      attivita: d.attivita || d.settore,
-      contatto: d.contatto,
-      messaggio: `RICHIESTA PREVENTIVO\n\n${riepilogoTesto(d)}`,
+    const trappola = form.querySelector('#sitoWeb');
+
+    fetch(INVIO, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        nome: d.nome,
+        attivita: d.attivita || d.settore,
+        contatto: d.contatto,
+        messaggio: 'RICHIESTA PREVENTIVO
+
+' + riepilogoTesto(d),
+        sitoWeb: trappola ? trappola.value : '',
+        tempo: Date.now() - APERTURA
+      })
     })
+      .then(r => {
+        if (r.ok) return r.json();
+        if (r.status === 429) throw new Error('troppe');
+        throw new Error('invio');
+      })
       .then(() => {
         stato.textContent = 'Richiesta arrivata. Ti rispondo in giornata.';
         stato.className = 'form__status form__status--success';
@@ -255,9 +267,11 @@
         vaiA(1, -1);
       })
       .catch(err => {
-        stato.innerHTML = 'Non è partita. Prova con il pulsante WhatsApp qui accanto, oppure scrivimi a <a href="mailto:padovanowebdesign@gmail.com">padovanowebdesign@gmail.com</a>.';
+        stato.innerHTML = err.message === 'troppe'
+          ? 'Hai gia inviato due richieste di fila. Aspetta un minuto, oppure scrivimi su WhatsApp qui accanto.'
+          : 'Non e' partita. Prova con il pulsante WhatsApp qui accanto, oppure scrivimi a <a href="mailto:padovanowebdesign@gmail.com">padovanowebdesign@gmail.com</a>.';
         stato.className = 'form__status form__status--error';
-        console.error('EmailJS:', err);
+        console.error('Invio preventivo:', err);
       })
       .finally(() => { btnMail.disabled = false; });
   });

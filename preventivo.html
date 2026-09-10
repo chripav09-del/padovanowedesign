@@ -23,7 +23,7 @@
   <meta name="twitter:image" content="https://padovanowebsite.chripav09.workers.dev/assets/og-image.jpg">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">  <link rel="stylesheet" href="assets/fonts/font.css?v=1">
-  <link rel="stylesheet" href="style.css?v=43">
+  <link rel="stylesheet" href="style.css?v=44">
 </head>
 <body>
 
@@ -50,6 +50,15 @@
       </div>
 
       <form class="wiz" id="prevForm" novalidate>
+
+        <!-- Campo trappola: nascosto alla vista e alla tastiera, un umano non lo
+             compila mai. Se arriva pieno, il worker butta via la richiesta senza
+             dire niente. Non si usa display:none: certi robot lo riconoscono. -->
+        <div class="trappola" aria-hidden="true">
+          <label for="sitoWeb">Non compilare questo campo</label>
+          <input type="text" id="sitoWeb" name="sitoWeb" tabindex="-1" autocomplete="off">
+        </div>
+
 
         <!-- Barra di avanzamento -->
         <div class="wiz__barra" role="group" aria-label="Avanzamento">
@@ -205,7 +214,6 @@
     </div>
   </footer>
 
-  <script src="assets/lib/emailjs.min.js"></script>
-  <script src="preventivo.js?v=4"></script>
+  <script src="preventivo.js?v=5"></script>
 </body>
 </html>

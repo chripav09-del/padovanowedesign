@@ -2485,3 +2485,13 @@ a.dato__val:hover { color: var(--blue-light); }
   .shot__pc { display: inline-flex; }
   .card--portfolio.is-in-corsa .shot__pc { background: rgba(59,130,246,.9); border-color: transparent; }
 }
+
+/* Il campo trappola del modulo: fuori dallo schermo, non nascosto con
+   display:none, perche' i robot piu' svegli riconoscono quel trucco e
+   lasciano il campo vuoto. Chi naviga con la tastiera non ci finisce
+   dentro (tabindex -1) e chi usa un lettore di schermo non lo sente
+   (aria-hidden sul contenitore). */
+.trappola {
+  position: absolute; left: -9999px; top: auto;
+  width: 1px; height: 1px; overflow: hidden;
+}
