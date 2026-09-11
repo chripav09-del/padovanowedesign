@@ -274,7 +274,7 @@
       .catch(err => {
         stato.innerHTML = err.message === 'troppe'
           ? 'Hai già inviato tre richieste di fila. Aspetta un minuto, oppure scrivimi su WhatsApp qui accanto.'
-          : 'Non è partita. Prova con il pulsante WhatsApp qui accanto, oppure scrivimi a <a href="mailto:padovanowebdesign@gmail.com">padovanowebdesign@gmail.com</a>.';
+          : 'Non è partita. Prova con il pulsante WhatsApp qui accanto, oppure scrivimi a <a href="mailto:info@padovanowebdesign.it">info@padovanowebdesign.it</a>.';
         stato.className = 'form__status form__status--error';
         console.error('Invio preventivo:', err);
       })
